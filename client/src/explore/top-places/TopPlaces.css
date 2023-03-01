@@ -1,0 +1,104 @@
+.top-place-container {
+    padding: 0 40px 20px;
+}
+
+.top-place-container > h2 {
+    font-size: 32px;
+  }
+  
+.top-place-image-carousel {
+    margin: 0 auto;
+    position: relative;
+}
+
+.top-place-image-carousel {
+    cursor: pointer;
+}
+
+.image-carousel-item {
+    padding: 5px 10px;    
+}
+
+.carousel-item-content {
+    border: 1px solid rgb(222, 214, 214);
+}
+    
+.carousel-item-content h3 {
+    font-size: 24px;
+    padding-left: 10px;    
+}
+    
+.carousel-item-content p {
+    padding-left: 10px;    
+}
+  
+.carousel-item-content .top-place-image {
+    width: 100%;
+    height: 200px;
+}
+
+.top-place-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-place-image:hover {
+    transform: scale(1.1);
+}
+
+
+/* .listing-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;
+} */
+
+/* center the button and the content both */
+.listing-btn {        
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 10px;
+}
+/* styling the button */
+.listing-btn {
+    border: none;
+    background-color: #3acbb5;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+/* start slick css */
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    z-index: 10;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #aaa;
+    background-color: unset;
+    font-size: 16px;
+    color: gray;
+}
+
+.slick-next {
+    right: -30px;
+}
+
+.slick-prev {
+    left: -30px;
+}
+
+.slick-arrow > i {
+    background-color: unset;
+}
+/* end slick css */

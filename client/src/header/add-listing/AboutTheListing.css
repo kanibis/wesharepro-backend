@@ -1,0 +1,22 @@
+.phone-no-form {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.phone-no-heading {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.phone-no-form-content input {
+    width: 60%;
+    border: none;
+    padding: 10px 12px;
+    background-color: #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+}
