@@ -5,7 +5,7 @@ const cors = require("cors");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require('./models/user')
-const path = require("path")
+// const path = require("path")
 require('./config/config')
 
 // const connectDB = async () => {
@@ -25,8 +25,6 @@ app.post('/register', async (req, res) => {
     result = result.toObject()
     delete result.password 
     res.send(result)
-
-    
 })
 
 app.post('/login', async (req, res) => {
@@ -41,16 +39,10 @@ app.post('/login', async (req, res) => {
     }   
     else {
         res.send({result: 'No user found'})
-    } 
-    
-    
+    }     
 })
 
-app.use(express.static(path.join(__dirname, './client/build')));
 
-app.get('*', function(req, res ){
-  res.SendFile(path.join(__dirname, './client/build/index.html'));
-});
 
 app.listen(5000)
 
