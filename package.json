@@ -4,7 +4,12 @@
   "description": "restful apis in node.js for user signup and login",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "node index.js",
+    "start-dev": "nodemon index.js",
+    "proxy" : "",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev":"concurrently \"npm run server\" \"npm run client\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kanishk Bisen",
