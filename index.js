@@ -5,6 +5,7 @@ const cors = require("cors");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require('./models/user')
+const path = require("path")
 require('./config/config')
 
 // const connectDB = async () => {
@@ -19,18 +20,7 @@ app.set("view engine", "ejs");
 
 app.post('/register', async (req, res) => {
     let user = new User(req.body)
-    // User.findOne({email:user.email},function(err,user){
-    //     if(user) return res.status(400).json({ message :"email exits"});
-  
-    //     user.save((err,doc)=>{
-    //         if(err) {console.log(err);
-    //             return res.status(400).json({ success : false});}
-    //         res.status(200).json({
-    //             succes:true,
-    //             user : doc
-    //         });
-    //     });
-    // });
+   
     let result = await user.save()
     result = result.toObject()
     delete result.password 
@@ -56,4 +46,32 @@ app.post('/login', async (req, res) => {
     
 })
 
+app.use(express.static(path.join(__dirname, './client/build')));
+
+app.get('*', function(req, res ){
+  res.SendFile(path.join(__dirname, './client/build/index.html'));
+});
+
 app.listen(5000)
+
+
+
+
+
+
+
+
+
+
+ // User.findOne({email:user.email},function(err,user){
+    //     if(user) return res.status(400).json({ message :"email exits"});
+  
+    //     user.save((err,doc)=>{
+    //         if(err) {console.log(err);
+    //             return res.status(400).json({ success : false});}
+    //         res.status(200).json({
+    //             succes:true,
+    //             user : doc
+    //         });
+    //     });
+    // });
